@@ -24,11 +24,6 @@ public class GetController {
         return service.createPerson(person);
     }
 
-    @PutMapping("/update/{id}")
-    public Person updatePerson(@PathVariable Long id, @RequestBody Person person) {
-        return service.updatePerson(id, person);
-    }
-
     @GetMapping("/{id}")
     public Person getPersonById(@PathVariable Long id) {
         return service.getPersonById(id);
