@@ -12,17 +12,10 @@ import java.io.Serializable;
 @AllArgsConstructor
 @Embeddable
 public class PersonPrimaryKey implements Serializable {
-    @Id
-    @Column
+    @Column(name = "name", nullable = false)
     private String name;
-    @Id
-    @Column
+    @Column(name = "surname", nullable = false)
     private String surname;
-    @Id
-    @Column
+    @Column(name = "age", nullable = false)
     private int age;
-    @Column(name = "phoneOfNumber")
-    private String phoneNumber;
-    @Column(name = "cityOfLiving")
-    private String city;
 }
